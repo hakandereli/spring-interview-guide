@@ -3,7 +3,33 @@ Bu projedeki çalışmalar https://github.com/in28minutes/spring-interview-guide
 
 ## Spring
 
+- What is Tight  Coupling?
+
+<p align="justify">
+Tight coupling, yazılım mühendisliğinde sık karşılaşılan bir terimdir ve Türkçe karşılığı yüksek(sıkı) bağımlılık olarak çevrilebilir.
+
+Yüksek bağımlılığa sahip bir sistemde, modüller birbirlerine sıkı sıkıya bağlıdır ve birbiriyle derin etkileşim içindedir. Bu şu anlama gelir:
+
+Bir modülde yapılan bir değişiklik, diğer modülleri de önemli ölçüde etkileyebilir.
+Bir modül çalışabilmek için mutlaka başka bir spesifik modülün varlığına ihtiyaç duyabilir.
+Modüller genellikle birbirleri arasında doğrudan veri paylaşımı yapar.
+Tight coupling'in dezavantajları şunlardır:
+
+Düşük esneklik: Bir modülde değişiklik yapmak zorlaşır çünkü bu değişiklik diğer bağlı modülleri de etkileyebilir. Bu da kodun güncellenmesini ve yeni özelliklerin eklenmesini zorlaştırır.
+Düşük sürdürülebilirlik: Bir modülde hata bulursanız, bu hata diğer bağlı modüllere de yayılabilir ve tüm sistemin çalışmasını etkileyebilir. Hataları düzeltmek ve sistemi sürdürmek zorlaşır.
+Düşük test edilebilirlik: Bağımlı modüllerin karmaşık ilişkileri nedeniyle tek tek modül test etmek zor olabilir.
+</p>
+
+
 - What is Loose Coupling?
+
+Loose coupling, yazılım geliştirmede sıklıkla kullanılan bir terimdir ve Türkçe karşılığı gevşek bağlılık olarak çevrilebilir.
+
+Bir sistemin gevşek bağlılık prensibine sahip olması, o sistemin içerisinde yer alan modüllerin birbirlerine olan bağımlılıklarının mümkün olduğunca az olması anlamına gelir. Bu durumda bir modülde yapılan bir değişiklik, diğer modülleri en az şekilde etkiler veya hiç etkilemez.
+
+Gevşek bağlılık sayesinde yazılımın esnekliği ve sürdürülebilirliği artar.  Yeni modüller eklemek veya mevcut modülleri değiştirmek daha kolay hale gelir ve hataların sisteme yayılma riski azalır.
+
+
 - What is a Dependency?
 - What is IOC (Inversion of Control)?
 - What is Dependency Injection?
