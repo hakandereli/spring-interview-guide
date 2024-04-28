@@ -3,6 +3,11 @@ Bu projedeki çalışmalar https://github.com/in28minutes/spring-interview-guide
 
 ## Spring
 
+- Spring Nedir?
+Spring objelerin üretimini ve bu objelerin birbiriyle olan ilişkilerini sağlayarak yönetimi kendi eline alır.
+Soyut bir yapı kurmanızı sağlar. Ne kadar az new dediğin önemlidir soyut bir yapı kurduysan new anahtar kelimesini kullanıdığın kodlar azalacaktır.
+
+
 - What is Tight  Coupling?
 
 <p align="justify">
@@ -31,10 +36,34 @@ Gevşek bağlılık sayesinde yazılımın esnekliği ve sürdürülebilirliği 
 
 
 - What is a Dependency?
+Java'da bağımlılık, bir sınıfın (bağımlı) düzgün çalışması için başka bir sınıfa (bağımlılık) ihtiyaç duyduğu ilişkidir. Bağımlı sınıf, görevlerini tamamlamak için bağımlılığın sağladığı işlevselliğe veya veriye ihtiyaç duyar.
+Coupling bağımlılık derecesi demek iken dependency bağımlılık demektir.
+Örneğin bir araba ve motor classın var araba nın hareket etmesi için motor classındaki çalış metoduna ihtiyacı vardır.
+Abstraction
+Realization
+Usage
+Aşağıdaki kodda;
+A nın P yi extends etmesi Abstraction
+A nın I yi implemet etmesi Realization
+A nın B, C ve D yi kullanması Usage dır.
+public class A extends P implements I{
+    private B b;
+    public void f(C c){...}
+    public D g(){return new D();}
+}
+
 - What is IOC (Inversion of Control)?
 - What is Dependency Injection?
+Bağımlılık enjeksiyonu bir nesnenin yaratıldıktan sonra farklı bir objeye enjekte edilmesi içerisine geçilmesidir.
+Bir obje farklı bir objeyi kendi içerisinde hem oluşturup hemde kullanıyorsa yüksek bağımlılığa sahiptir. Objeleri yaratan yapı farklı olmalıdır örneğin factory pattern gibi.
+Obje yaratma işi factory ye aittir spring bu yapıyı otomatize eder factory leride kendi oluşturur yani obje oluşturma işini spring yapar.
+sen yaratılan objeyi inject eder kullanırsın.
+
 - Can you give few examples of Dependency Injection?
 - What is Auto Wiring?
+Sistem objeler arası ilişkileri bilmemeli yani objelerin birbirine bağlanması wiring ini de spring yapsın. Ana uygulama objeler arası ilişkileri bilmemeli soyut bir yapı için.
+Spring sadece objeleri oluşturmakla kalmaz bu objeler arası ilişkileride wiring lerle enjekte ederek yönetir.
+
 - What are the important roles of an IOC Container?
 - What are Bean Factory and Application Context?
 - Can you compare Bean Factory with Application Context?
